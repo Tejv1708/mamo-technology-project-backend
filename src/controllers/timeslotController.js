@@ -47,7 +47,7 @@ export const createSlot = async (req, res, next) => {
 
     return res.status(201).json(newSlot);
   } catch (err) {
-    console.log("Error from TimeSlot ", err);
+    res.status(500).json("Error from Creating Slot ", err);
   }
 };
 
